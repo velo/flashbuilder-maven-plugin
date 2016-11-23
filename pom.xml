@@ -29,7 +29,6 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <coveralls.token></coveralls.token>
     <java.version>1.7</java.version>
   </properties>
 
@@ -45,15 +44,20 @@
       <version>3.0</version>
     </dependency>
     <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-artifact</artifactId>
+      <version>3.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-model</artifactId>
+      <version>3.0</version>
+    </dependency>
+    <dependency>
       <groupId>org.apache.maven.plugin-tools</groupId>
       <artifactId>maven-plugin-annotations</artifactId>
       <version>3.2</version>
       <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.codehaus.plexus</groupId>
-      <artifactId>plexus-utils</artifactId>
-      <version>3.0.8</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -112,24 +116,6 @@
               <goal>prepare-agent</goal>
               <goal>report</goal>
             </goals>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.eluder.coveralls</groupId>
-        <artifactId>coveralls-maven-plugin</artifactId>
-        <version>4.2.0</version>
-        <configuration>
-          <skip>${skipTests}</skip>
-          <repoToken>${coveralls.token}</repoToken>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>report</goal>
-            </goals>
-            <phase>verify</phase>
           </execution>
         </executions>
       </plugin>
@@ -297,9 +283,9 @@
     </plugins>
   </build>
 
-  <url>https://github.com/${owner}/${name}/</url>
+  <url>https://github.com/velo/flashbuilder-maven-plugin/</url>
 
-  <inceptionYear>${year}</inceptionYear>
+  <inceptionYear>2016</inceptionYear>
 
   <licenses>
     <license>
@@ -319,9 +305,9 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git@github.com:${owner}/${name}.git</connection>
-    <developerConnection>scm:git:git@github.com:${owner}/${name}.git</developerConnection>
-    <url>https://github.com/${owner}/${name}/</url>
+    <connection>scm:git:git@github.com:velo/flashbuilder-maven-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:velo/flashbuilder-maven-plugin.git</developerConnection>
+    <url>https://github.com/velo/flashbuilder-maven-plugin/</url>
   </scm>
 
   <distributionManagement>
